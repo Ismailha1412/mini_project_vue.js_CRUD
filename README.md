@@ -76,4 +76,4 @@ Yang harus dilakukan adalah memisahkan atribut yang bergantung pada atribut non-
 
 3. Tabel Jurusan
    
-![image](https://github.com/user-attachments/assets/03417f95-2881-48db-8def-aed8859d55e2)
+   ![image](https://github.com/user-attachments/assets/03417f95-2881-48db-8def-aed8859d55e2)
