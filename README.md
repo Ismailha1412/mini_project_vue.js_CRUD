@@ -1,109 +1,66 @@
-# mini_project_vue.js_CRUD (Normalisasi Database)
-A. Pengertian
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Normalisasi Database adalah proses pengorganisasi suatu database untuk mengurangi redundansi data atau duplicate data sehingga data tersebut terstruktur dengan baik
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-Langkah-Langkah normalisasi yaitu
-1. UNF (Unormalized Form)
-2. 1NF (First Normal Form)
-3. 2NF (Second Normal Form)
-4. 3NF (Third Normal Form)
-5. BCNF (Boyce-Codd Normal Form)
-6. 4NF (Fourth Normal Form)
-7. 5NF (Fifth Normal Form)
+## About Laravel
 
-Namun normalisasi database hingga tahap 3NF sudah termasuk database yang terstruktur.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-B. UNF (Unormalized Form)
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-UNF adalah bentuk tabel universal. Data dalam UNF biasanya berupa laporan yaitu data yang biasa diterima dan dibaca oleh manusia. Namun data ini tidak bisa dibaca oleh sistem. Oleh karena itu, perlu dilakukan normalisasi agar semua data bisa tersimpan di dalam database sehingga tidak ada data yang redundansi atau data yang sama (duplicate). Perhatikan contoh berikut:
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-![image](https://github.com/user-attachments/assets/141d959c-1556-4847-9670-bf6d7d1b193c)
+## Learning Laravel
 
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-Tabel di atas merupakan tabel UNF dimana masih terdapat kolom atau baris yang merge. Oleh karena iitu perlu dilakukan normalisasi tahap 1
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-C. 1NF (First Normal Form)
+## Laravel Sponsors
 
-1NF dimaksudkan setiap baris dan kolom hanya berisi satu nilai. Adapun aturan dalam 1NF yaitu
-1. Atribut name yang unik
-2. Setiap atribut diisi oleh 1 data
-3. Setiap baris harus berbeda dengan baris lainnya
-4. Tidak ada repeating group
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-Dengan mengikuti aturan tersebut maka tabel di atas akan menjadi seperti ini
+### Premium Partners
 
-![image](https://github.com/user-attachments/assets/ba9db3e0-a39c-456a-a76e-e699f3266149)
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
+## Contributing
 
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
+## Code of Conduct
 
-Setelah itu, kita tentukan Primary Key. Primary Key haruslah unique. Jika kita hanya menggunakan NIM saja, maka kode ini akan muncul lagi dibawah. Hal ini berarti tidak unique. Oleh karena itu perlu dilakukan composite key dimana menggabungkan 2 atribut sehingga menjadi primary key yang unique dan tidak akan berulang kembali. Disini saya membuat Primary Key dari NIM dan Kode Matkul. Berikut tampilan Primary Key untuk tabel tersebut.
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-![image](https://github.com/user-attachments/assets/613bd55f-567d-4b77-9da8-6c803f7c8c14)
+## Security Vulnerabilities
 
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
+## License
 
-
-D. 2NF (Second Normal Form)
-
-Tahap selanjutnya adalah mengubah tabel tersebut menjadi 2NF. Adapun aturan dalam 2NF yaitu
-1. Tabel harus berada dalam bentuk 1NF
-2. Semua atribut yag bukan Primary Key harus bergantung pada Primary Key
-
-Setelah aturan tersebut dipenuhi kita harus memisahkan tabel tersebut ke beberapa tabel berdasarkan Primary Key. Tabel tersebut akan menjadi seperti di bawah ini
-1. Tabel Matkul
-
-   ![image](https://github.com/user-attachments/assets/98e3a688-7182-4fb0-ad37-9ec3aa98735c)
-
-
-
-Seperti yang terlihat bahwa atribut Nama Matkul dan SKS bergantung kepada Kode Matkul
-
-2. Tabel Mahasiswa
-
-    ![image](https://github.com/user-attachments/assets/3f5b4099-ee43-4960-be52-3f5b4d526336)
-
-
-
-
-Begitu juga halnya dengan atribut Nama, Prodi, dan Jurusan bergantung kepada atribut NIM.
-
-3. Tabel Nilai
-
-   ![image](https://github.com/user-attachments/assets/380b45aa-c3cd-4547-a200-e36df959f446)
-
-
-Tabel ini menunjukkan bahwa Nilai bergantung pada Primary Key NIM dan Kode Matkul
-
-
-E. 3NF (Third Normal Form)
-
-Tahap berikutnya adalah mengubah tabel tersebut ke bentuk 3NF. Adapun syaratnya adalah
-1. Tabel harus berbentuk 2NF
-2. Semua atribut non-Primary Key tidak boleh bergantung pada atribut lainnya yang bukan Primary Key
-
-Yang harus dilakukan adalah memisahkan atribut yang bergantung pada atribut non-Primary Key menjadi tabel lainnya. Dari tabel sebelumnya terlihat bahwa prodi bergantung pada Jurusan. Misalnya jika ada penambahan prodi baru, maka prodi tersebut tidak bisa ditambahkan karena atribut prodi harus bergantung pada NIM. Sedangkan NIM belum ada karena tidak ada mahasiswa. Oleh karena itu, kita harus memisahkan atribut ini menjadi tabel baru. Berikut tampilan tabel dalam bentuk 3NF
-1. Tabel Matkul
-
-   ![image](https://github.com/user-attachments/assets/2e05fdeb-81b8-4750-8711-54ffc482e59b)
-
-
-
-
-2. Tabel Mahasiswa
-
-   ![image](https://github.com/user-attachments/assets/21edddb6-3225-4ae4-a9f8-30d3af4a52bb)
-
-
-
-3. Tabel Nilai
-
-   ![image](https://github.com/user-attachments/assets/380b45aa-c3cd-4547-a200-e36df959f446)
-   
-5. Tabel Jurusan
-   
-   ![image](https://github.com/user-attachments/assets/9dc18684-bca1-42ba-9fe5-53f4d6e28bd2)
-
-
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
